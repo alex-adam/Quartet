@@ -4,13 +4,15 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.*;
 
+import org.junit.*;
+
 public class TestQuartetLogin {
 
 	WebDriver driver;
 	QuartetLogin objLogin;
 	//GuruLogin objLogin;
 
-	@BeforeTest
+	@Before
 	public void setup() {
 		System.setProperty("webdriver.chrome.driver", 
 				System.getProperty("user.dir")+"/chrome/chromedriver");
