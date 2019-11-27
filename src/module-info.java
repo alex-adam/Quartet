@@ -1,0 +1,3 @@
+module Quartet {
+	requires okio;
+}
