@@ -8,8 +8,14 @@
 ## Introduction
 This is an eclipse project using Selenium to test the login portal of Quartet.
 
+##### QuartetLogin.java
+POM of the Login Portal of Quartet
+
+##### TestQuartetLogin.java
+Holds the testcase and uses QuartetLogin to run its validations.
+
 ## How-to-run
-The test can be run with JUnit inside of eclipse.
+TestQuartetLogin.java can be run with JUnit inside of eclipse.
 
 ![](media/test.gif)
 
