@@ -1,21 +1,23 @@
 # Quartet
 
-# Table of Contents
+## Table of Contents
 [Introduction](#introduction)  
 [How-to-run](#how-to-run)  
-[Improvements for Production-environment](#improvements for production environment)  
+[Enhancements](#enhancements)  
 
-# Introduction
+## Introduction
 This is an eclipse project using Selenium to test the login portal of Quartet.
 
-# How-to-run
+## How-to-run
 The test can be run with JUnit inside of eclipse.
 
-// gif
+![](media/test.gif)
 
-# Improvements for Production-environment
+## Enhancements
+The following enhancements can be done in the future and should be revisited when
+used in a production environment:
 * Timeouts globally defined
-* Using _@CacheLookup_ to make the lookup once and cache element
+* Using _@CacheLookup_ to make the lookup once and cache elements
 * Check for other browsers
 * Additional Testcases could be:
   * Check for correct credentials
