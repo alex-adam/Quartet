@@ -30,7 +30,7 @@ public class TestQuartetLogin {
 	public void test_login() {
 		objLogin = new QuartetLogin(driver);
 		objLogin.login("mgr123@gmail.com", "mgr!23");
-		Assert.assertTrue(objLogin.getErrorMessage().toLowerCase().contains("invalid username and/or password"));
+		Assert.assertTrue(objLogin.getInvalidCredentialsErrorMessage().toLowerCase().contains("invalid username and/or password"));
 	}
 
 	@After

@@ -19,9 +19,6 @@ public class QuartetLogin {
 	@FindBy(name="password")
 	WebElement password;    
 	
-	@FindBy(className="sc-eNQAEJ jObAxp")
-	WebElement invalidUser;
-
 	public QuartetLogin(WebDriver driver){
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -42,11 +39,11 @@ public class QuartetLogin {
 	} 
 	
 	/**
-	 * Returns the Error Message on an invalid input
+	 * Returns the Error Message on an invalid credentials
 	 * @return errorMessage
 	 */
-    public String getErrorMessage(){
-    	return driver.findElement(By.xpath("/html/body/div/div/div[2]/div[1]/div/div/div/form/div/div[2]/div[2]/div")).getText();
+    public String getInvalidCredentialsErrorMessage(){
+    	return driver.findElement(By.xpath("//div[contains(@class, 'sc-eNQAEJ jObAxp')]")).getText();
     }
 
 	/**
