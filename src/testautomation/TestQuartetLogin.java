@@ -19,7 +19,7 @@ public class TestQuartetLogin {
 
 		//TODO: check for other browser?
 		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 		//driver.get("http://demo.guru99.com/V4/");
 		driver.get("https://patient.quartethealth.com/login");
 	}
@@ -43,18 +43,20 @@ public class TestQuartetLogin {
 		//Assert.assertTrue(loginPageTitle.toLowerCase().contains("guru99 bank"));
 
 		//login to application
-		objLogin.login("mgr123", "mgr!23");
+		//objLogin.login("mgr123", "mgr!23");
+		//Assert valid email address
+		
+		objLogin.login("mgr123@gmail.com", "mgr!23");
 
 		// go the next page
 		//objHomePage = new Guru99HomePage(driver);
 
 		//Verify home page
-		Assert.assertTrue(false);
-		//Assert.assertTrue(objHomePage.getHomePageDashboardUserName().toLowerCase().contains("manger id : mgr123"));
+		Assert.assertTrue(objLogin.getErrorMessage().toLowerCase().contains("invalid username and/or password"));
 	}
 
-	//		@AfterMethod
-	//	    public void cleanUp(){
-	//	        driver.close();
-	//	    }
+	@After
+	public void cleanUp(){
+		driver.close();
+	}
 }
