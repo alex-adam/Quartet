@@ -18,9 +18,6 @@ public class QuartetLogin {
 
 	@FindBy(name="password")
 	WebElement password;    
-
-	@FindBy(className="sc-cHGsZl sc-eLdqWK hYBEMu")
-	WebElement login;
 	
 	@FindBy(className="sc-eNQAEJ jObAxp")
 	WebElement invalidUser;
@@ -42,15 +39,7 @@ public class QuartetLogin {
 	 */
 	public void setPassword(String password){
 		this.password.sendKeys(password);
-	}
-
-	/**
-	 * Clicks the Login Button
-	 */
-	public void clickLogin(){
-		System.out.print(login);
-		login.click();
-	}  
+	} 
 	
 	/**
 	 * Returns the Error Message on an invalid input
@@ -61,7 +50,7 @@ public class QuartetLogin {
     }
 
 	/**
-	 * This POM method will be exposed in test case to login in the application
+	 * Sets Username and Password and attempts to log in
 	 * @param userName
 	 * @param password
 	 */
